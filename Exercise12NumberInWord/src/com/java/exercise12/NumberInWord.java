@@ -1,11 +1,6 @@
 package com.java.exercise12;
 
 public class NumberInWord {
-	public static void main(String[] args) {
-		printNumberInWord(0);
-		printNumberInWord(10);
-	}
-
 	public static void printNumberInWord(int num) {
 		switch (num) {
 		case 0:

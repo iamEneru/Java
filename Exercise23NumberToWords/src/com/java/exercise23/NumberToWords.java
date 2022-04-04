@@ -1,38 +1,6 @@
 package com.java.exercise23;
 
 public class NumberToWords {
-	public static void main(String[] args) {
-		// Example Input/Output - getDigitCount method
-
-		System.out.println(getDigitCount(0)); // should return 1 since there is only 1 digit
-
-		System.out.println(getDigitCount(123)); // should return 3
-
-		System.out.println(getDigitCount(-12)); // should return -1 since the parameter is negative
-
-		System.out.println(getDigitCount(5200)); // should return 4 since there are 4 digits in the number
-
-		// Example Input/Output - reverse method
-
-		System.out.println(reverse(-121)); // should return -121
-
-		System.out.println(reverse(1212)); // should return 2121
-
-		System.out.println(reverse(1234)); // should return 4321
-
-		System.out.println(reverse(100)); // should return 1
-
-		// Example Input/Output - numberToWords method
-
-		numberToWords(123); // should print "One Two Three".
-
-		numberToWords(1010); // should print "One Zero One Zero".
-
-		numberToWords(1000); // should print "One Zero Zero Zero".
-
-		numberToWords(-12); // should print "Invalid Value" since the parameter is negative.
-	}
-
 	public static int getDigitCount(int number) {
 
 		if (number == 0)
