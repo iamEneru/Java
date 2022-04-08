@@ -35,10 +35,10 @@ public class Main {
 		locations.get(5).addExit("S", 1);
 		locations.get(5).addExit("W", 2);
 
-		vocabulary.put("NORTH", "N");
-		vocabulary.put("SOUTH", "S");
-		vocabulary.put("WEST", "W");
-		vocabulary.put("EAST", "E");
+		vocabulary.put("N", "NORTH");
+		vocabulary.put("S", "SOUTH");
+		vocabulary.put("W", "WEST");
+		vocabulary.put("E", "EAST");
 	}
 
 	public void command() {
@@ -57,12 +57,19 @@ public class Main {
 
 			String input = scanner.next();
 
-			System.out.println(isPresent(input));
+			for (String key : exits.keySet()) {
+				String compass = vocabulary.get(1);
+				if (input.equals(key) || )) {
+					location = exits.get(key);
+				}
+			}
 
 		}
 	}
 
 	private boolean isPresent(String input) {
+		for (String key : )
+		
 		for (String key : vocabulary.keySet()) {
 			if (input.toUpperCase().contains(key) || input.toUpperCase().equals(vocabulary.get(key))) {
 				return true;
