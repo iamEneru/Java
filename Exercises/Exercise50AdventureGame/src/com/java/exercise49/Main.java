@@ -1,7 +1,7 @@
 package com.java.exercise49;
 
 /*
-Only add/edit code where it is stated in the description.
+	Only add/edit code where it is stated in the description.
 */
 
 import java.util.HashMap;
@@ -44,8 +44,20 @@ public class Main {
 	public void command() {
 		Scanner scanner = new Scanner(System.in);
 		int location = 1;
+		boolean isExist = true;
 		while (true) {
+
+			if (!isExist)
+				System.out.println("You cannot go in that direction");
+			isExist = false;
+
 			System.out.println(locations.get(location).getDescription());
+
+			if (location == 0) {
+				scanner.close();
+				break;
+			}
+
 			System.out.print("Available exits are ");
 
 			Map<String, Integer> exits = locations.get(location).getExits();
@@ -55,26 +67,21 @@ public class Main {
 
 			System.out.println();
 
-			String input = scanner.next();
+			String input = scanner.nextLine();
+
+			if (input.toUpperCase().equals("QUIT")) {
+				location = 0;
+				isExist = true;
+				continue;
+			}
 
 			for (String key : exits.keySet()) {
-				String compass = vocabulary.get(1);
-				if (input.equals(key) || )) {
+				if (input.toUpperCase().equals(key)
+						|| (vocabulary.get(key) != null && input.toUpperCase().contains(vocabulary.get(key)))) {
 					location = exits.get(key);
+					isExist = true;
 				}
 			}
-
 		}
-	}
-
-	private boolean isPresent(String input) {
-		for (String key : )
-		
-		for (String key : vocabulary.keySet()) {
-			if (input.toUpperCase().contains(key) || input.toUpperCase().equals(vocabulary.get(key))) {
-				return true;
-			}
-		}
-		return false;
 	}
 }
