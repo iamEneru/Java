@@ -1,4 +1,4 @@
-package com.java.exercise49;
+package com.java.exercise50;
 
 /*
 	Only add/edit code where it is stated in the description.
@@ -35,6 +35,7 @@ public class Main {
 		locations.get(5).addExit("S", 1);
 		locations.get(5).addExit("W", 2);
 
+		vocabulary.put("Q", "QUIT");
 		vocabulary.put("N", "NORTH");
 		vocabulary.put("S", "SOUTH");
 		vocabulary.put("W", "WEST");
@@ -45,8 +46,8 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		int location = 1;
 		boolean isExist = true;
-		while (true) {
 
+		while (true) {
 			if (!isExist)
 				System.out.println("You cannot go in that direction");
 			isExist = false;
@@ -67,17 +68,10 @@ public class Main {
 
 			System.out.println();
 
-			String input = scanner.nextLine();
-
-			if (input.toUpperCase().equals("QUIT")) {
-				location = 0;
-				isExist = true;
-				continue;
-			}
+			String input = scanner.nextLine().toUpperCase();
 
 			for (String key : exits.keySet()) {
-				if (input.toUpperCase().equals(key)
-						|| (vocabulary.get(key) != null && input.toUpperCase().contains(vocabulary.get(key)))) {
+				if (input.equals(key) || input.contains(vocabulary.get(key))) {
 					location = exits.get(key);
 					isExist = true;
 				}

@@ -1,4 +1,4 @@
-package com.java.exercise49;
+package com.java.exercise50;
 
 /*
 	Do not change anything in this class
