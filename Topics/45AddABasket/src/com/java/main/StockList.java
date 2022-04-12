@@ -8,6 +8,7 @@ public class StockList {
 	private final Map<String, StockItem> list;
 
 	public StockList() {
+//		this.list = new LinkedHashMap<>(); // in order
 		this.list = new HashMap<>();
 	}
 
