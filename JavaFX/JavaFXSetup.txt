@@ -33,3 +33,5 @@
 - Select User Library then Next
 - Then select the created User Library (JavaFX-17 [system library])
 - Click Finish
+
+NOTE: You don't need to create a module-info.java file in the project
