@@ -35,3 +35,8 @@
 - Click Finish
 
 NOTE: You don't need to create a module-info.java file in the project
+
+=====================================================================
+
+Java Look and Feel Graphics Repository 1.0
+- https://www.oracle.com/java/technologies/java-archive-downloads-java-client-downloads.html#7520-jlf-1.0-oth-JPR
