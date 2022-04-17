@@ -1,0 +1,35 @@
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.*?>
+
+<?import java.lang.String?>
+
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:controller="application.Controller"
+	xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10"
+	vgap="10">
+	<padding>
+		<Insets top="10" right="10" bottom="10" left="10" />
+	</padding>
+	<TextField fx:id="nameField" GridPane.rowIndex="0"
+		GridPane.columnIndex="0" GridPane.columnSpan="2"
+		onKeyReleased="#onKeyReleased" />
+	<Button fx:id="helloButton" text="Say Hello"
+		GridPane.rowIndex="1" GridPane.columnIndex="0" prefWidth="120"
+		onAction="#onButtonClicked" />
+	<Button fx:id="byeButton" text="Say Bye" GridPane.rowIndex="1"
+		GridPane.columnIndex="1" prefWidth="120" onAction="#onButtonClicked" />
+	<CheckBox fx:id="checkBox"
+		text="Clear the field after saying hello or bye" GridPane.rowIndex="2"
+		GridPane.columnIndex="0" GridPane.columnSpan="2"
+		onAction="#onTextChanged" />
+	<Label fx:id="gridPaneLabel" text="Nothing has happened."
+		GridPane.rowIndex="3" GridPane.columnIndex="0" />
+</GridPane>
