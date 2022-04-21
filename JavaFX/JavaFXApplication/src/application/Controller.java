@@ -7,8 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.GridPane;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+
 
 public class Controller {
 
@@ -40,6 +40,8 @@ public class Controller {
 	@FXML
 	public void handleClick() {
 		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Save Application File");
+		fileChooser.getExtensionFilters().addAll(new FileChooser().ExtentionFilter("Text", "*.txt"));
 		File file = fileChooser.showSaveDialog(gridPane.getScene().getWindow());
 		if (file != null) {
 			System.out.println(file.getPath());
