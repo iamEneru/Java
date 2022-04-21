@@ -1,0 +1,78 @@
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.*?>
+
+<?import java.lang.String?>
+
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainBorderPane"
+	fx:controller="com.java.todolist.Controller"
+	xmlns:fx="http://javafx.com/fxml">
+	<top>
+		<VBox>
+			<MenuBar>
+				<Menu text="File">
+					<items>
+						<MenuItem text="Create new Todo item..."
+							onAction="#showNewItemDialog" />
+						<SeparatorMenuItem />
+						<MenuItem text="Exit" onAction="#handleExit" />
+					</items>
+				</Menu>
+			</MenuBar>
+			<ToolBar>
+				<HBox>
+					<Button onAction="#showNewItemDialog" prefHeight="35">
+						<tooltip>
+							<Tooltip text="Create new Todo item..." />
+						</tooltip>
+						<graphic>
+							<ImageView>
+								<Image url="@/toolbarButtonGraphics/general/New24.gif" />
+							</ImageView>
+						</graphic>
+					</Button>
+					<ToggleButton fx:id="filterToggleButton"
+						onAction="#handleFilterButton" text="Today's Items"
+						prefHeight="35" />
+				</HBox>
+			</ToolBar>
+		</VBox>
+	</top>
+	<left>
+		<ListView fx:id="todoListView"
+			onKeyPressed="#handleKeyPressed">
+		</ListView>
+	</left>
+	<center>
+		<VBox style="-fx-background-color: white">
+			<TextArea fx:id="detailsTextArea" editable="false"
+				VBox.vgrow="ALWAYS" wrapText="true">
+				<font>
+					<Font name="Arial bold" size="20" />
+				</font>
+			</TextArea>
+
+			<HBox>
+				<Label text="Due: " style="-fx-background-color: white">
+					<font>
+						<Font name="Arial" size="12" />
+					</font>
+				</Label>
+				<Label fx:id="deadlineLabel"
+					style="-fx-background-color: white">
+					<font>
+						<Font name="Arial bold" size="12" />
+					</font>
+				</Label>
+			</HBox>
+		</VBox>
+	</center>
+</BorderPane>
