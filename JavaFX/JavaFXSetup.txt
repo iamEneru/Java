@@ -6,12 +6,12 @@
 - Select Java > Build Path > User Libraries
 - Click New... button, then type "JavaFX-17" for User library name, click OK
 - Select the JavaFX-17 then click Add External JARs...
-- Go to C:\Program Files\Java\javafx-sdk-17.0.2\lib and select all JAR files, Apply and Close
+- Go to C:\Program Files\Java\[JavaFX (ex: javafx-sdk-17.0.1)]\lib and select all JAR files, Apply and Close
 
 - In Eclipse, click the Help menu then Eclipse Marketplace...
 - In Search tab, find Gluon Plugin then click install
-- In Eclipse menu bar, click Help menu then Install New Software
-- Click Add... button, Name: Update Site, Location: http://download.gluonhq.com/tools/eclipse/updates/1.0.0, then click Add
+- In Eclipse, click Help menu then Install New Software
+- Click Add... button, Name: Update Site, Location: http://download.gluonhq.com/tools/eclipse/updates/1.0.0 or later (ex 2.0.0), then click Add
 - Make sure that the newly added update site is selected, then check e(fx)clipse and Gluon
 - Click Next, then Next, then Finish
 - OR click the Check for Updates in Help menu
@@ -20,9 +20,10 @@
 - Select the Project...
 - Select the JavaFX > JavaFX Project
 - Go to Window > Preferences > Java > Installed JREs
-- Select the default JREs (ex: jdk-17.0.2) then click Duplicate...
+- Select the default JREs (ex: jdk-17.0.1) then click Duplicate...
 - JRE name: javafx-jre-17
-- Default VM arguments: --module-path "C:\Program Files\Java\javafx-sdk-17.0.2\lib" --add-modules javafx.fxml,javafx.controls
+- Default VM arguments: --module-path "C:\Program Files\Java\[JavaFX (ex: javafx-sdk-17.0.1)]\lib" --add-modules javafx.fxml,javafx.controls
+	[append modules here by adding a comma first then the module (ex: javafx.web) in case there is a problem in compiling (ex: WebView is not a valid type)
 - Click Add External JARs...
 - Select all the JAR files from C:\Program Files\Java\javafx-sdk-17.0.2\lib
 - Click Finish
