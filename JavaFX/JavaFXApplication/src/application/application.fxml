@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.*?>
 
+<?import javafx.scene.web.*?>
+
 <GridPane fx:id="gridPane"
 	fx:controller="application.Controller"
 	xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10"
@@ -21,4 +23,8 @@
 	<Label fx:id="label" text="JavaFX Effects" GridPane.rowIndex="1"
 		GridPane.columnIndex="1" rotate="90"
 		onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" />
+	<Hyperlink text="www.javafx.com" GridPane.rowIndex="3"
+		GridPane.columnIndex="0" onAction="#handleLinkClick" />
+	<WebView GridPane.rowIndex="4" GridPane.columnIndex="0"
+		GridPane.columnSpan="5" GridPane.rowSpan="3" />
 </GridPane>

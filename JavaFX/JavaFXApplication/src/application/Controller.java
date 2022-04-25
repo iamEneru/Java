@@ -1,6 +1,11 @@
 package application;
 
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,7 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
-
+import javafx.stage.FileChooser.ExtensionFilter;
 
 public class Controller {
 
@@ -41,15 +46,17 @@ public class Controller {
 	public void handleClick() {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Save Application File");
-		fileChooser.getExtensionFilters().addAll(new FileChooser().ExtentionFilter("Text", "*.txt"));
-		File file = fileChooser.showSaveDialog(gridPane.getScene().getWindow());
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Text", "*.txt"),
+				new ExtensionFilter("PDF", "*.pdf"), new ExtensionFilter("All Files", "*.*"),
+				new ExtensionFilter("Image Files", "*.jpg", "*.png", "*.gif"));
+		List<File> file = fileChooser.showOpenMultipleDialog(gridPane.getScene().getWindow());
 		if (file != null) {
-			System.out.println(file.getPath());
+			for (int i = 0; i < file.size(); i++)
+				System.out.println(file.get(i));
 		}
-		
+
 		System.out.println("Chooser was cancelled");
-		
-		
+
 //		DirectoryChooser directoryChooser = new DirectoryChooser();
 //		File file = directoryChooser.showDialog(gridPane.getScene().getWindow());
 //		if (file != null) {
@@ -58,5 +65,10 @@ public class Controller {
 //		}
 //
 //		System.out.println("Chooser was cancelled");
+	}
+
+	@FXML
+	public void handleLinkClick() throws IOException, URISyntaxException {
+		Desktop.getDesktop().browse(new URI("http://www.javafx.com"));
 	}
 }
