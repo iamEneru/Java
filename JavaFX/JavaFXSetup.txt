@@ -44,3 +44,11 @@ Java Look and Feel Graphics Repository 1.0
 - Right-click project, go to Properties > Java Build Path > Libraries
 - Select Classpath, click Add External JARs...
 - Select the download jar file
+
+=====================================================================
+
+SceneBuilder
+- https://gluonhq.com/products/scene-builder/
+- In Eclipse, Window > Preferences > JavaFX
+- SceneBuilder executable: C:\Users\leone\AppData\Local\SceneBuilder\SceneBuilder.exe
+- Apply and Close
