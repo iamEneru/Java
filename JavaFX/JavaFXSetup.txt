@@ -52,3 +52,4 @@ SceneBuilder
 - In Eclipse, Window > Preferences > JavaFX
 - SceneBuilder executable: C:\Users\leone\AppData\Local\SceneBuilder\SceneBuilder.exe
 - Apply and Close
+- To open/use SceneBuilder in Eclipse, right-click the fxml file in the project then select Open with SceneBuilder
