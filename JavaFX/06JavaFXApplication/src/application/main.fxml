@@ -8,7 +8,7 @@
 <GridPane fx:id="gridPane"
 	fx:controller="application.Controller"
 	xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10"
-	vgap="10" stylesheets="@application.css">
+	vgap="10" stylesheets="@styles.css">
 	<Button text="Open..." GridPane.rowIndex="0"
 		GridPane.columnIndex="0" onAction="#handleClick" />
 	<Button text="Button Two" GridPane.rowIndex="0"

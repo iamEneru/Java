@@ -12,14 +12,14 @@ public class Main extends Application {
 		// Default
 //		BorderPane root = new BorderPane();
 //		Scene scene = new Scene(root, 400, 400);
-//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//		scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 //		primaryStage.setTitle("Hello World");
 //		primaryStage.setScene(scene);
 //		primaryStage.show();
 
 		/////////////////////////////////////////////////////
 
-		Parent root = FXMLLoader.load(getClass().getResource("application.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
 		primaryStage.setTitle("Hello JavaFX!");
 		primaryStage.setScene(new Scene(root, 700, 275));
 		primaryStage.show();
@@ -38,7 +38,7 @@ public class Main extends Application {
 //		root.getChildren().add(greeting);
 
 //		Scene scene = new Scene(root, 700, 275);
-//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//		scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 //		primaryStage.setTitle("Hello JavaFX!");
 //		primaryStage.setScene(scene);
 //		primaryStage.show();
