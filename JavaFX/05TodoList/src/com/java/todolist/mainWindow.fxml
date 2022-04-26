@@ -1,16 +1,21 @@
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.control.*?>
-
-<?import javafx.scene.image.*?>
-
-<?import javafx.scene.text.*?>
-
-<?import javafx.collections.*?>
-
-<?import java.lang.String?>
-
-<?import javafx.geometry.Insets?>
+<?fxml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="mainBorderPane"
 	fx:controller="com.java.todolist.Controller"
